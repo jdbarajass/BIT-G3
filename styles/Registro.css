@@ -147,6 +147,9 @@
 .space-y-6 {
   margin-top: 24px;
 }
+.marginlabel{
+  margin-right: 30px;
+}
 .sindecoraciontexto {
   text-decoration: none;
 }
