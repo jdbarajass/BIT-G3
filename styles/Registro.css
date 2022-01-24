@@ -6,6 +6,10 @@
     rgba(255, 231, 181, 1) 100%
   );
 }
+.imagendefondoboy{
+  
+  background-image: url(/estilo/imagen/banner.png);
+}
 .margindelabel {
     margin: 5px;
 }
