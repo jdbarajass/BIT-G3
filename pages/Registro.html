@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Registro.css" />
+    <script
+      src="https://kit.fontawesome.com/d4cd33a1a3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="./scriptRegistro.js"></script>
+    <title>Document</title>
+  </head>
+  <body
+    class="min-h-screen flex flex-col items-center justify-center bg-gray-50 py-2 px-4 colordefondo"
+  >
+    <div class="w-full flex items-start">
+      <i class="fas fa-home cursor-pointer text-indigo-500"></i>
+    </div>
+    <div class="max-w-md w-full">
+      <img
+        class="imgLogoBIT-G3"
+        src="./media/Logo2BIT-G3.png"
+        alt="Logo Bit-G3"
+      />
+    </div>
+    <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
+      Crea tu cuenta
+    </h2>
+    <form class="mt-8 space-y-6">
+      <div class="rounded-md grid grid-cols-2 gap-2 ">
+        <label htmlFor="nombre">
+          Nombre
+          <input
+            name="nombre"
+            type="text"
+            autocomplete="email"
+            required
+            class="relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md"
+            placeholder="e.j. Jose"
+          />
+        </label>
+        <label htmlFor="apellido">
+          Apellido
+          <input
+            name="apellido"
+            type="text"
+            required
+            class="relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md"
+            placeholder="e.j. Barajas"
+          />
+        </label>
+        <label htmlFor="telefono">
+          Teléfono
+          <input
+            name="telefono"
+            type="tel"
+            required
+            class="relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md"
+            placeholder="e.j. 3144065520"
+          />
+        </label>
+        <label htmlFor="nacimiento">
+          Fecha de Nacimiento
+          <input
+            name="nacimiento"
+            type="date"
+            required
+            class="relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md"
+          />
+        </label>
+        <label htmlFor="correo">
+          Correo electrónico
+          <input
+            name="correo"
+            type="email"
+            required
+            class="relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md"
+          />
+        </label>
+        <label htmlFor="nacimiento">
+          Contraseña
+          <input
+            name="contraseña"
+            type="password"
+            required
+            class="relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md"
+          />
+        </label>
+      </div>
+
+      <div>
+        <button
+          type="submit"
+          class="buttonregistro group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md bg-indigo-600 hover:bg-indigo-700"
+        >
+          <a class="text-white" href="/">Regístrate</a>
+        </button>
+      </div>
+
+      <div class="flex items-center justify-between">
+        <span>¿Ya tienes cuenta?</span>
+        <a class="sindecoraciontexto" href="/"
+          ><span class="font-medium text-indigo-600 hover:text-indigo-500">
+            Inicia Sesión
+          </span></a
+        >
+      </div>
+    </form>
+  </body>
+</html>
