@@ -5,6 +5,7 @@
 .logo {
   width: 60px;
   height: 50px;
+  border-radius: 80%;
 }
  @font-face {
 font-family: letra;
@@ -18,14 +19,12 @@ src: url(/Fuentesdetexto/MochiyPopPOne-Regular.ttf);
 }
 .banner{
 margin-top: -20px;
-margin-left: -40px;
- background-size: 100%;
+margin-left: -10px;
 }
 .banner img{
-    width: 100%;
+    width: 1264px;
     height: 550px;
-    /* width: 1268px;
-    height: 550px; */
+    margin-left: -65px;
 }
 
 .lead {
@@ -36,12 +35,14 @@ margin-left: -40px;
   height: 400px;
   margin-top: 70px;
   margin-left: 38px;
+  border-radius: 50%;
 }
 .ventajas_img {
   max-width: 450px;
   height: 400px;
   margin-left: -5px;
   margin-top: 50px;
+  border-radius: 50%;
 }
 
 .beneficios {
@@ -49,6 +50,7 @@ margin-left: -40px;
   height: 400px;
   margin-left: 22px;
   margin-top: 5px;
+  border-radius: 50%;
 }
 
 .bit {
