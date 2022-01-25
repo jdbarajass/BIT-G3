@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="/styles/stylescalculadora.css">
+    <title>Document</title>
+  </head>
+  <body class="columnas" onload="init(); initBIT();">
+    <h1>Calculadora para convertir BIT-G3 a pesos colombianos
+      <br> 1) Ingrese su valor en pesos colombianos
+      <br> 2) Dele click al boton C/B ($ Colombiano a BIT-G3)
+      <br> 3) Luego al boton igual "=" 
+      <br>
+      <br> Calculadora para convertir BIT-G3 a Dolar $ 
+      <br> 1) Ingrese su valor en Dolares
+      <br> 2) Dele click al boton D/B ($ Dolar a BIT-G3)
+      <br> 3) Luego al boton igual "="
+    </h1>
+    <table class="calculadora">
+      <tr>
+        <td colspan="4">
+          <span id="resultado"></span>
+        </td>
+      </tr>
+      <tr><td><h5>Calculadora</h5></td></tr>
+      <tr>
+          <td><button id="siete">7</button></td>
+          <td><button id="ocho">8</button></td>
+          <td><button id="nueve">9</button></td>
+          <td><button id="division">/</button></td>
+      </tr>
+      <tr>
+          <td><button id="cuatro">4</button></td>
+          <td><button id="cinco">5</button></td>
+          <td><button id="seis">6</button></td>
+          <td><button id="multiplicacion">*</button></td>
+      </tr>
+      <tr>
+          <td><button id="uno">1</button></td>
+          <td><button id="dos">2</button></td>
+          <td><button id="tres">3</button></td>
+          <td><button id="resta">-</button></td>
+      </tr>
+      <tr>
+          <td><button id="igual">=</button></td>
+          <td><button id="reset">C</button></td>
+          <td><button id="cero">0</button></td>
+          <td><button id="suma">+</button></td>
+      </tr>
+    </table>
+    <table class="calculadora">
+      <tr>
+        <td colspan="4">
+          <span id="resultadoBIT"></span>
+        </td>
+      </tr>
+      <tr><td><h5>BIT-G3</h5></td></tr>
+      <tr>
+          <td><button id="sieteBIT">7</button></td>
+          <td><button id="ochoBIT">8</button></td>
+          <td><button id="nueveBIT">9</button></td>
+          <td><button id="divisionBIT">/</button></td>
+      </tr>
+      <tr>
+          <td><button id="cuatroBIT">4</button></td>
+          <td><button id="cincoBIT">5</button></td>
+          <td><button id="seisBIT">6</button></td>
+          <td><button id="multiplicacionBIT">*</button></td>
+      </tr>
+      <tr>
+          <td><button id="unoBIT">1</button></td>
+          <td><button id="dosBIT">2</button></td>
+          <td><button id="tresBIT">3</button></td>
+          <td><button id="restaBIT">C/B</button></td>
+      </tr>
+      <tr>
+          <td><button id="igualBIT">=</button></td>
+          <td><button id="resetBIT">C</button></td>
+          <td><button id="ceroBIT">0</button></td>
+          <td><button id="sumaBIT">D/B</button></td>
+      </tr>
+    </table>
+    <!-- <input type="number" id="numero1" placeholder="Ingrese un numero" />
+    <input type="number" id="numero2" placeholder="Ingrese un numero" />
+    <input type="text" id="nombreprueba" />
+    <input type="text" id="prueba" />
+    <button id="set">Guardar en localstogare</button>
+    <button id="get">Mostrar localStogare</button> -->
+    <script src="/JavaScript/scriptCalculadora.js"></script>
+  </body>
+</html>
