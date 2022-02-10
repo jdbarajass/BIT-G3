@@ -126,6 +126,9 @@ button {
     font-family: letra;
     color: black;
 }
+.borrar{
+    border-radius: 20px;
+}
 .registro{
     width: 180px;
     border-style: solid black;
