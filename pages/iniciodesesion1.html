@@ -1,49 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="/styles/iniciodesesion.css" />
-    <script
-      type="text/javascript"
-      src="/JavaScript/iniciodesesion2.js"
-    ></script>
-  </head>
-  <body>
-    <form>
-      <section>
-        <h5 class="h5">Iniciar Sesión</h5>
-        <input
-          id="usuario"
-          class="controls"
-          type="text"
-          name="usuario"
-          placeholder="usuario"
-        />
-        <input
-          id="contraseña"
-          class="controls"
-          type="password"
-          name="contrseña"
-          placeholder="contraseña"
-        />
-        <button id="boton" class="ingresar" type="submit" onclick="ingresar();">
-          Ingresar
-        </button>
-        <br />
-        <br />
-        <button class="registro">
-          <a class="text-white" href="/pages/calculadora.html">Registrate</a> 
-        </button>
-        <br />
-        <br />
-        <br />
-        <p><a href="inicio.html">¿Olvidate tu contraseña?</a></p>
-      </section>
-    </form>
-  </body>
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="/styles/iniciodesesion.css" />
+  <script type="text/javascript" src="/JavaScript/iniciodesesion2.js"></script>
+
+</head>
+
+
+<body class="inicio">
+  <form>
+    <section>
+      <h5 class="h5">Iniciar Sesión</h5>
+      <input id="usuario" class="controls" type="text" name="usuario" placeholder="Correo electrónico" />
+      <input id="contraseña" class="controls" type="password" name="contrseña" placeholder="Contraseña" />
+      <button id="boton" class="ingresar" type="submit" onclick="ingresar();">
+        Ingresar
+      </button>
+      <br />
+      <br />
+      <button class="registro">
+        <a class="text-white" href="Registro.html">Registrate</a>
+      </button>
+      <br />
+      <br />
+      <br />
+      <p><a class="olvido" href="#">¿Olvidate tu contraseña?</a></p>
+    </section>
+  </form>
+</body>
+
 </html>
 <!-- <!DOCTYPE html>
 <html lang="es">
