@@ -4,6 +4,9 @@ var app = express();
 var bodyParser = require("body-parser");
 
 app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(express.static("/styles"));
+// app.use(express.static(__dirname + "/styles"));
+app.use(express.static("./styles"));
 mongoose
   .connect(
     "mongodb+srv://jdbarajass:1234@cluster0.ukrek.mongodb.net/RegistroUsuBIT?retryWrites=true&w=majority"
@@ -18,9 +21,8 @@ mongoose
 var Registro = require("./src/models/Registros");
 
 app.get("/inicio", function (req, res) {
-  console.log("Hola, ingresaste a localhost:3000/probando");
-
-  res.sendFile(__dirname + "/src/pages/index.html");
+  console.log("Hola, ingresaste a localhost:3000/Inicio");
+  res.sendFile(__dirname + "/src/pages/Registro.html");
 });
 
 app.post("/registro", async function (req, res) {
