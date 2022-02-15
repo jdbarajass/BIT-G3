@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url(/imagenes/inicio_fondo.png) no-repeat;
+  background: url(/inicio_fondo.png) no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -18,11 +18,9 @@ section {
   margin-top: 75px;
   box-shadow: 0px 0px 6px #000;
   padding: 20px 30px;
-
 }
 
 h5 {
-
   text-align: center;
   height: 50px;
   margin-bottom: 35px;
@@ -46,18 +44,19 @@ button {
   margin-bottom: 10px;
 }
 
-
-
 .ingresar {
-  width: 180px;font-size: 17px;
+  width: 180px;
+  font-size: 17px;
   font-family: "Poppins", sans-serif;
   margin-left: 130px;
 }
 .registro {
-  width: 180px; font-size: 17px;
+  width: 180px;
+  font-size: 17px;
   font-family: "Poppins", sans-serif;
-  margin-left: 130px;}
-  
+  margin-left: 130px;
+}
+
 .registro a {
   list-style: none;
   text-decoration: none;
