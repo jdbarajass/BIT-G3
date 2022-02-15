@@ -52,7 +52,14 @@ app.post("/suscripcion", async function (req, res) {
   res.redirect("/inicio");
 });
 
-
+app.post("/login", async function (req, res) {
+  var correoLogin = req.body.correo;
+  var correosRegistrados = await Registro.find({ correo: correoLogin }).limit(
+    1
+  );
+  console.log("si el correo esta: ", correosRegistrados);
+  res.redirect("/inicio");
+});
 
 app.listen(3000);
 console.log("Servidor iniciado en el puerto 3000");
