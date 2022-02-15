@@ -21,6 +21,7 @@ mongoose
   });
 
 var Registro = require("./src/models/Registros");
+const suscripcion = require("./src/models/suscripcion");
 
 app.get("/inicio", function (req, res) {
   console.log("Hola, ingresaste a localhost:3000/Inicio");
@@ -43,6 +44,15 @@ app.post("/registro", async function (req, res) {
   await nuevoRegistro.save();
   res.redirect("/inicio");
 });
+
+app.post("/suscripcion", async function (req, res) {
+  var datosSuscripcion = req.body;
+  var nuevoSuscriptor = new suscripcion(datosSuscripcion);
+  await nuevoSuscriptor.save();
+  res.redirect("/inicio");
+});
+
+
 
 app.listen(3000);
 console.log("Servidor iniciado en el puerto 3000");
