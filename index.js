@@ -60,9 +60,8 @@ app.post("/login", async function (req, res) {
   if (correosRegistrados.length == 0) {
     res.redirect("/Registro");
   } else {
-    res.redirect("/Registro");
+    res.redirect("/inicio");
   }
-  res.redirect("/inicio");
 });
 
 app.listen(3000);
