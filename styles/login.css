@@ -144,7 +144,7 @@ header label{
 	display: flex;
 	align-items: initial;
 	justify-content: initial;
-	background: url(/imagen/inicio_fondo.png) ;
+	background: url(/imagenes/inicio_fondo.png) ;
 	background-size: cover;
 	background-position: center;
 	height: 630px;
