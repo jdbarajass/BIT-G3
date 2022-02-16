@@ -28,6 +28,11 @@ app.get("/inicio", function (req, res) {
   res.sendFile(__dirname + "/src/pages/index.html");
 });
 
+app.get("/login", function (req, res) {
+  console.log("Hola, ingresaste a localhost:3000/Inicio");
+  res.sendFile(__dirname + "/src/pages/login.html");
+});
+
 app.get("/inicarSesion", function (req, res) {
   console.log("Hola, ingresaste a localhost:3000/Inicio");
   res.sendFile(__dirname + "/src/pages/iniciodesesion1.html");
@@ -58,9 +63,11 @@ app.post("/login", async function (req, res) {
     1
   );
   if (correosRegistrados.length == 0) {
+    console.log("no estas registrado");
     res.redirect("/Registro");
   } else {
     res.redirect("/inicio");
+    console.log("si estas registrado");
   }
 });
 
