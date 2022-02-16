@@ -58,11 +58,12 @@ app.post("/login", async function (req, res) {
     1
   );
   if (correosRegistrados.length == 0) {
+    console.log("no estas registrado")
     res.redirect("/Registro");
   } else {
-    res.redirect("/Registro");
+    res.redirect("inicio");
+    console.log("si estas registrado")
   }
-  res.redirect("/inicio");
 });
 
 app.listen(3000);
