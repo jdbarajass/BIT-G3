@@ -57,7 +57,11 @@ app.post("/login", async function (req, res) {
   var correosRegistrados = await Registro.find({ correo: correoLogin }).limit(
     1
   );
-  console.log("si el correo esta: ", correosRegistrados);
+  if (correosRegistrados.length == 0) {
+    res.redirect("/Registro");
+  } else {
+    res.redirect("/Registro");
+  }
   res.redirect("/inicio");
 });
 
