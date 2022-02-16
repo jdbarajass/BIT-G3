@@ -66,7 +66,7 @@ app.post("/login", async function (req, res) {
     console.log("no estas registrado");
     res.redirect("/Registro");
   } else {
-    res.redirect("/inicio");
+    res.redirect("/login");
     console.log("si estas registrado");
   }
 });
