@@ -1,0 +1,78 @@
+#titulo {
+  font-weight: normal;
+  /* margin-top: 80px; */
+  border-bottom: 1px black solid;
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  /* text-align: center; */
+  margin-bottom: 40px;
+}
+.instrucciones {
+  font-weight: normal;
+  font-size: 15px;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+.calculadora-general {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 69%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  margin-top: -20px;
+}
+
+.calculadora-pantalla {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 20px;
+  width: 350px;
+  height: 50px;
+  line-height: 50px;
+  background-color: rgb(2, 2, 2);
+  color: white;
+}
+
+button {
+  height: 60px;
+  font-size: 2rem !important;
+}
+#igual {
+  height: 98%;
+  grid-area: 2 / 4 / 6 / 5;
+  background-color: #2bbbad !important;
+}
+
+.calculadora-filas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 30px;
+  padding-top: 0px;
+}
+
+#suma {
+  background-color: #33b5e5 !important;
+}
+#resta {
+  background-color: #33b5e5 !important;
+}
+#multiplicacion {
+  background-color: #33b5e5 !important;
+}
+#division {
+  background-color: #33b5e5 !important;
+}

@@ -2,16 +2,15 @@ var express = require("express");
 var mongoose = require("mongoose");
 var app = express();
 var bodyParser = require("body-parser");
-
 app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(express.static("/styles"));
 // app.use(express.static(__dirname + "/styles"));
 // app.use(express.static("styles"));
 app.use(express.static(__dirname + "/styles"));
 app.use(express.static(__dirname + "/imagenes"));
-var path = __dirname + '/src/views';
-app.set('views', path);
-app.set('view engine', 'ejs');
+var path = __dirname + "/src/views";
+app.set("views", path);
+app.set("view engine", "ejs");
 mongoose
   .connect(
     "mongodb+srv://jdbarajass:1234@cluster0.ukrek.mongodb.net/RegistroUsuBIT?retryWrites=true&w=majority"
@@ -26,13 +25,12 @@ mongoose
 var Registro = require("./src/models/Registros");
 var suscripcion = require("./src/models/suscripcion");
 var Contactanos = require("./src/models/Contactanos");
+var Bienvenido = require("./src/models/Bienvenido");
 
 app.get("/inicio", function (req, res) {
   console.log("Hola, ingresaste a localhost:3000/Inicio");
   res.sendFile(__dirname + "/src/pages/index.html");
 });
-
-
 
 app.get("/inicarSesion", function (req, res) {
   console.log("Hola, ingresaste a localhost:3000/Inicio");
@@ -77,6 +75,28 @@ app.post("/loginUsuario", async function (req, res) {
     console.log("si estas registrado");
     res.render("loginUsuario");
   }
+});
+
+// app.post("/Bienvenido", async function (req, res) {
+//   var datosBienvenido = req.body;
+//   var nuevoBienvenido = new Bienvenido(datosBienvenido);
+//   await nuevoBienvenido.save();
+//   res.redirect("/loginUsuario");
+// });
+app.get("/loginUsuario", async function (req, res) {
+  res.render("loginUsuario");
+});
+app.get("/calculadora", async function (req, res) {
+  res.render("calculadora");
+});
+app.get("/billetera", async function (req, res) {
+  res.render("billetera");
+});
+app.get("/referidos", async function (req, res) {
+  res.render("referidos");
+});
+app.get("/preguntasFrecuentes", async function (req, res) {
+  res.render("preguntasFrecuentes");
 });
 
 // app.get("/login", function (req, res) {

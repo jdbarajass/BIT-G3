@@ -1,0 +1,74 @@
+<%- include('header.ejs') %>
+
+
+    <%- include('sidebar.ejs') %>
+        <section>
+            <div class="content">
+                <link rel="stylesheet" href="/calculadora.css">
+                </header>
+
+                <h5 id="titulo">Conversión de monedas</h5>
+                <h5 class="instrucciones">
+                    <br />
+                    Instrucciones para convertir BIT-G3 a Pesos Colombianos
+                    <br>
+                    <br>
+                    1) Ingrese su valor en pesos colombianos <br />
+                    <br>
+                    2) Dele click al boton C/B ($ Colombiano a BIT-G3) <br />
+                    <br>
+                    3) Luego al boton igual "="
+                </h5>
+
+
+            </div>
+
+        </section>
+
+        <section>
+            <div class="conten2">
+                <div class="calculadora-general">
+                    <input type="text" class="resultado" />
+                    <div class="calculadora-pantalla" colspan="4">
+                        <span id="resultado"></span>
+                    </div>
+
+
+                    <div class="calculadora-filas">
+
+                        <button id="suma">+</button>
+                        <button id="resta">-</button>
+                        <button id="multiplicacion"> &times;</button>
+                        <button id="division">&divide;</button>
+
+
+                        <button id="siete">7</button>
+                        <button id="ocho">8</button>
+                        <button id="nueve">9</button>
+
+
+                        <button id="cuatro">4</button>
+                        <button id="cinco">5</button>
+                        <button id="seis">6</button>
+
+
+                        <button id="uno">1</button>
+                        <button id="dos">2</button>
+                        <button id="tres">3</button>
+
+
+                        <button id="cero">0</button>
+                        <button id="punto">.</button>
+                        <button id="reset">AC </button>
+
+                        <button id="igual">= </button>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <script src="/calculadora.js"></script>
+
+        <%- include('footer.ejs') %>
