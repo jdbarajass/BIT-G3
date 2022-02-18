@@ -24,7 +24,8 @@ mongoose
   });
 
 var Registro = require("./src/models/Registros");
-const suscripcion = require("./src/models/suscripcion");
+var suscripcion = require("./src/models/suscripcion");
+var Contactanos = require("./src/models/Contactanos");
 
 app.get("/inicio", function (req, res) {
   console.log("Hola, ingresaste a localhost:3000/Inicio");
@@ -54,6 +55,13 @@ app.post("/suscripcion", async function (req, res) {
   var datosSuscripcion = req.body;
   var nuevoSuscriptor = new suscripcion(datosSuscripcion);
   await nuevoSuscriptor.save();
+  res.redirect("/inicio");
+});
+
+app.post("/Contactanos", async function (req, res) {
+  var datosContactanos = req.body;
+  var nuevoContacto = new Contactanos(datosContactanos);
+  await nuevoContacto.save();
   res.redirect("/inicio");
 });
 
