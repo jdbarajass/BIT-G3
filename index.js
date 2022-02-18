@@ -9,6 +9,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(express.static("styles"));
 app.use(express.static(__dirname + "/styles"));
 app.use(express.static(__dirname + "/imagenes"));
+var path = __dirname + '/src/views';
+app.set('views', path);
+app.set('view engine', 'ejs');
 mongoose
   .connect(
     "mongodb+srv://jdbarajass:1234@cluster0.ukrek.mongodb.net/RegistroUsuBIT?retryWrites=true&w=majority"
@@ -28,10 +31,7 @@ app.get("/inicio", function (req, res) {
   res.sendFile(__dirname + "/src/pages/index.html");
 });
 
-app.get("/login", function (req, res) {
-  console.log("Hola, ingresaste a localhost:3000/Inicio");
-  res.sendFile(__dirname + "/src/pages/login.html");
-});
+
 
 app.get("/inicarSesion", function (req, res) {
   console.log("Hola, ingresaste a localhost:3000/Inicio");
@@ -57,19 +57,24 @@ app.post("/suscripcion", async function (req, res) {
   res.redirect("/inicio");
 });
 
-app.post("/login", async function (req, res) {
+app.post("/loginUsuario", async function (req, res) {
   var correoLogin = req.body.correo;
   var correosRegistrados = await Registro.find({ correo: correoLogin }).limit(
     1
   );
   if (correosRegistrados.length == 0) {
     console.log("no estas registrado");
-    res.redirect("/Registro");
+    res.sendFile(__dirname + "/src/pages/Registro.html");
   } else {
-    res.redirect("/login");
     console.log("si estas registrado");
+    res.render("loginUsuario");
   }
 });
+
+// app.get("/login", function (req, res) {
+//   console.log("Hola, ingresaste a localhost:3000/Inicio");
+//   res.redirect('/login');
+// });
 
 app.listen(3000);
 console.log("Servidor iniciado en el puerto 3000");

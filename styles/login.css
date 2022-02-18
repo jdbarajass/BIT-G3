@@ -100,7 +100,7 @@ header .logo span {
 }
 
 header .navbar a {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   margin-left: 2rem;
   color: var(--verde);
 }
@@ -139,7 +139,7 @@ header label {
 main {
   display: flex;
   flex-wrap: nowrap;
-  font-size: 15px;
+  font-size: 20px;
   font-family: "Poppins", sans-serif;
   height: 100vh;
   height: -webkit-fill-available;
