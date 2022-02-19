@@ -8,6 +8,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(express.static("styles"));
 app.use(express.static(__dirname + "/styles"));
 app.use(express.static(__dirname + "/imagenes"));
+app.use(express.static(__dirname + "/JavaScrip"));
+app.use(express.static(__dirname + "/calculadora.js"));
+app.use(express.static("/calculadora.js"));
 var path = __dirname + "/src/views";
 app.set("views", path);
 app.set("view engine", "ejs");
@@ -25,8 +28,10 @@ mongoose
 var Registro = require("./src/models/Registros");
 var suscripcion = require("./src/models/suscripcion");
 var Contactanos = require("./src/models/Contactanos");
-var Bienvenido = require("./src/models/Bienvenido");
-
+app.get("/borrar", function (req, res) {
+  console.log("Hola, ingresaste a localhost:3000/Inicio");
+  res.sendFile(__dirname + "/prueba.html");
+});
 app.get("/inicio", function (req, res) {
   console.log("Hola, ingresaste a localhost:3000/Inicio");
   res.sendFile(__dirname + "/src/pages/index.html");
