@@ -1,15 +1,16 @@
 .instrucciones1 {
-margin-left: -100px;
+margin-left: -50px;
 }
 #titulo {
   font-weight: normal;
+  margin-top: 50px;
   /* border-bottom: 1px black solid; */
-  font-size: 15px;
+  font-size: 20px;
   font-family: "Poppins", sans-serif;
-  /* margin-bottom: 450px; */
+  text-align: center;
 }
 .instrucciones {
-  font-size: 15px;
+  font-size: 12px;
   text-align: justify;
   margin-top: 50px;
 }
@@ -21,25 +22,23 @@ html {
 .calculadora-general {
   background-color: rgb(255, 255, 255);
   position: absolute;
-  top: 69%;
+  top: 54%;
   left: 80%;
   transform: translate(-50%, -50%);
   width: 350px;
-  margin-top: -100px;
   border-bottom: 1px black solid;
   border-left: 1px black solid;
   border-right: 1px black solid;
   border-top: 1px black solid;
-
 }
 
 .calculadora-pantalla {
   display: block;
   font-size: 15px;
-  margin-bottom: 20px;
-  width: 350px;
+  width: 348px;
   height: 50px;
   line-height: 50px;
+  margin-bottom: 20px;
   background-color: rgb(2, 2, 2);
   color: white;
 }
@@ -74,3 +73,22 @@ button {
 #division {
   background-color: #33b5e5 !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
