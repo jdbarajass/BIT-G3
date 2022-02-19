@@ -127,8 +127,12 @@ header label {
 }
 
 .paddingSidebar {
-  padding-top: 5%;
-  margin-top: 5%;
+  padding-top: 1%;
+  margin-top: 3%;
+  margin-left: 5px;
+  max-width: 210px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
 }
 
 .inicio {
