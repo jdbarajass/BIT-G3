@@ -1,6 +1,8 @@
 body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -23,7 +25,7 @@ html {
   text-decoration: none;
   outline: none;
   border: none;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 
 *::selection {
@@ -31,10 +33,10 @@ html {
   color: white;
 }
 
-html {
+/* html {
   font-size: 62.4%;
   overflow: auto;
-}
+} */
 
 body {
   background: #f9f9f9;
@@ -127,12 +129,14 @@ header label {
 }
 
 .paddingSidebar {
-  padding-top: 1%;
-  margin-top: 3%;
-  margin-left: 5px;
+  padding-top: 2%;
+  margin-top: 5%;
+  margin-left: 0.5%;
   max-width: 210px;
+  max-height: 60px;
   font-family: "Poppins", sans-serif;
-  font-size: 15px;
+  font-size: 14px;
+  width: 100%;
 }
 
 .inicio {
@@ -140,8 +144,8 @@ header label {
   align-items: initial;
   justify-content: initial;
   background: url(/inicio_fondo.png);
-  background-size: cover;
-  background-position: center;
+  background-size: initial;
+  /* background-position: center; */
   height: 630px;
 }
 
@@ -157,7 +161,8 @@ main {
   overflow-y: hidden;
   margin-top: 50px;
 }
-*/ .b-example-divider {
+
+.b-example-divider {
   flex-shrink: 0;
   width: 0px;
   height: 100%;
