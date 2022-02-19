@@ -1,7 +1,7 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
-var Bienvenido = new Schema({
+var bienvenido = new Schema({
   depositos: Number,
   retiros: Number,
   cambios: Number,
@@ -9,4 +9,4 @@ var Bienvenido = new Schema({
   bienvenido: String,
 });
 
-module.exports = mongoose.model("Bienvenido", Bienvenido);
+module.exports = mongoose.model("bienvenido", bienvenido);

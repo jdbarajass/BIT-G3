@@ -28,6 +28,7 @@ mongoose
 var Registro = require("./src/models/Registros");
 var suscripcion = require("./src/models/suscripcion");
 var Contactanos = require("./src/models/Contactanos");
+var bienvenido = require("./src/models/bienvenido");
 app.get("/borrar", function (req, res) {
   console.log("Hola, ingresaste a localhost:3000/Inicio");
   res.sendFile(__dirname + "/prueba.html");
@@ -73,12 +74,15 @@ app.post("/loginUsuario", async function (req, res) {
   var correosRegistrados = await Registro.find({ correo: correoLogin }).limit(
     1
   );
+
   if (correosRegistrados.length == 0) {
     console.log("no estas registrado");
     res.sendFile(__dirname + "/src/pages/Registro.html");
   } else {
     console.log("si estas registrado");
-    res.render("loginUsuario");
+    res.render("loginUsuario", {
+      usuarioBitg3: correosRegistrados,
+    });
   }
 });
 

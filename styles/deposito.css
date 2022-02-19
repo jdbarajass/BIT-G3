@@ -1,0 +1,58 @@
+@font-face {
+  font-family: omegle;
+  src: url(/letra/OMEGLE.ttf);
+}
+
+.deposito1 {
+  width: 202px;
+  background-color: rgb(255, 52, 15);
+  color: rgb(255, 255, 255);
+  margin-right: 5px;
+  text-align: center;
+  border-bottom: 5px rgb(0, 0, 0) solid;
+}
+.h22 {
+  font-size: 25px;
+}
+.todo1 {
+  display: flex;
+}
+.retiro1 {
+  width: 202px;
+  background-color: rgb(255, 162, 0);
+  color: rgb(255, 255, 255);
+  margin-right: 5px;
+  text-align: center;
+  border-bottom: 5px rgb(0, 0, 0) solid;
+}
+.cambio1 {
+  width: 202px;
+  background-color: rgb(0, 141, 63);
+  color: rgb(255, 255, 255);
+  margin-right: 5px;
+  text-align: center;
+  border-bottom: 5px rgb(0, 0, 0) solid;
+}
+.balance1 {
+  width: 202px;
+  background-color: rgb(1, 152, 255);
+  color: rgb(255, 255, 255);
+  margin-right: 5px;
+  text-align: center;
+  border-bottom: 5px rgb(0, 0, 0) solid;
+}
+.numerosl {
+  font-size: 20px;
+}
+.bienvenido1 {
+  background-color: antiquewhite;
+  width: 300px;
+}
+.informacion1 {
+  background-color: antiquewhite;
+  width: 300px;
+}
+.contenedo {
+  display: flex;
+  justify-content: space-between;
+}
