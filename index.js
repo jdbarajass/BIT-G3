@@ -68,7 +68,9 @@ app.post("/Contactanos", async function (req, res) {
   await nuevoContacto.save();
   res.redirect("/inicio");
 });
-
+// app.get("/loginUsuario", async function (req, res) {
+//   res.render("loginUsuario");
+// });
 app.post("/loginUsuario", async function (req, res) {
   var correoLogin = req.body.correo;
   var correosRegistrados = await Registro.find({ correo: correoLogin }).limit(
@@ -86,15 +88,25 @@ app.post("/loginUsuario", async function (req, res) {
   }
 });
 
+app.get("/inicioBilletera", async function (req, res) {
+  var listado = await Registro.find().sort({ nombreUsuario: 1 });
+
+  res.render("inicioBilletera", {
+    usuarioBitg3: listado,
+  });
+  // var datosContactanos = req.body;
+  // var nuevoContacto = new Contactanos(datosContactanos);
+  // await nuevoContacto.save();
+  // res.redirect("/inicio");
+});
+
 // app.post("/Bienvenido", async function (req, res) {
 //   var datosBienvenido = req.body;
 //   var nuevoBienvenido = new Bienvenido(datosBienvenido);
 //   await nuevoBienvenido.save();
 //   res.redirect("/loginUsuario");
 // });
-app.get("/loginUsuario", async function (req, res) {
-  res.render("loginUsuario");
-});
+
 app.get("/calculadora", async function (req, res) {
   res.render("calculadora");
 });

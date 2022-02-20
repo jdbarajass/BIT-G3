@@ -2,65 +2,6 @@
 
     <%- include('sidebar.ejs') %>
         <section>
-            <link rel="stylesheet" href="/deposito.css">
-
-            <div>
-                <div class="todo1">
-                    <div class="deposito1">
-                        <i class="icon fa fa-download"></i>
-                        <h1 class="h22"> Deposito</h1>
-                        <span class="numerosl">5</span>
-                    </div>
-                    <div class="retiro1">
-                        <i class="fa-solid fa-upload"></i>
-                        <h1 class="h22">Retiros</h1>
-                        <span class="numerosl">2</span>
-                    </div>
-                    <div class="cambio1">
-                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                        <h1 class="h22">Cambios</h1>
-                        <span class="numerosl">3</span>
-                    </div>
-                    <div class="balance1">
-                        <i class="fa-solid fa-bitcoin-sign"></i>
-                        <h1 class="h22">Balance</h1>
-                        <span class="numerosl">0.12</span>
-                    </div>
-                </div>
-                <div class="contenedo">
-                    <div class="bienvenido1">
-                        <h1 class="bien">Bienvenido de nuevo</h1>
-                        <span class="nombreu">Paola</span>
-                    </div>
-                    <div class="informacion1">
-                        <h1 class="info">Información para depositar</h1>
-                        <span class="cuen">Numero de cuenta 19324789357</span>
-                    </div>
-                </div>
-
-                <% for(var i=0; i<usuarioBitg3.length; i++){ %>
-                    <tr>
-                        <td>
-                            <%= usuarioBitg3[i].nombreUsuario %>
-                        </td>
-                        <td>
-                            <%= usuarioBitg3[i].apellido %>
-                        </td>
-                        <td>
-                            <%= usuarioBitg3[i].telefono %>
-                        </td>
-                        <td>
-                            <%= usuarioBitg3[i].fechaNacimiento %>
-                        </td>
-                        <td>
-                            <a href="/detalle/<%= usuarioBitg3[i]._id + '/' + usuarioBitg3[i].auto %>">Ver</a> -
-                            <a href="/modificar/<%= usuarioBitg3[i]._id %>">Editar</a> -
-                            <a href="/eliminar/<%= usuarioBitg3[i]._id %>">Eliminar</a>
-                        </td>
-                    </tr>
-                    <% } %>
-                        </table>
-
-            </div>
+            <h1>Alguna imagen de bienvenida y demás</h1>
         </section>
         <%- include('footer.ejs') %>
