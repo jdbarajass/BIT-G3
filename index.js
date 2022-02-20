@@ -68,9 +68,9 @@ app.post("/Contactanos", async function (req, res) {
   await nuevoContacto.save();
   res.redirect("/inicio");
 });
-app.get("/loginUsuario", async function (req, res) {
-  res.render("loginUsuario");
-});
+// app.get("/loginUsuario", async function (req, res) {
+//   res.render("loginUsuario");
+// });
 app.post("/loginUsuario", async function (req, res) {
   var correoLogin = req.body.correo;
   var correosRegistrados = await Registro.find({ correo: correoLogin }).limit(
