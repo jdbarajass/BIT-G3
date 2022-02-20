@@ -24,10 +24,10 @@
   color: white;
 }
 
-html {
+/* html {
   font-size: 62.4%;
   overflow: auto;
-}
+} */
 
 body {
   background: #f9f9f9;
@@ -75,15 +75,15 @@ header {
   width: 100%;
   background: white;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  padding: 2rem 9%;
+  padding: 1%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1000;
+  /* z-index: 1000; */
 }
 
 header .logo {
-  font-size: 2rem;
+  font-size: 25px;
   color: var(--verde);
 }
 
@@ -92,7 +92,7 @@ header .logo span {
 }
 
 header .navbar a {
-  font-size: 1.8rem;
+  /* font-size: 1.8rem; */
   margin-left: 2rem;
   color: var(--verde);
 }
@@ -160,7 +160,7 @@ header label {
 .detalles .caja-contenedor .caja p {
   font-size: 1.3rem;
   color: rgb(8, 8, 8);
-font-size: 15px;
+  font-size: 15px;
 }
 .instrucciones_r {
   text-align: justify;
