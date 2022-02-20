@@ -57,7 +57,7 @@ section {
   border-radius: 5rem;
   background: var(--degradado);
   color: white;
-  font-size: 1.8rem;
+  font-size: 12px;
   cursor: pointer;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
   transition: all 0.3s linear;
@@ -73,7 +73,7 @@ section {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  font-size: 3.5rem;
+  font-size: 12px;
   text-transform: uppercase;
   padding: 2rem;
 }
@@ -88,7 +88,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1000;
+  /* z-index: 1000; */
 }
 
 header .logo {
@@ -102,7 +102,7 @@ header .logo span {
 }
 
 header .navbar a {
-  font-size: 1.9rem;
+  /* font-size: 1.9rem; */
   margin-left: 2rem;
   color: var(--verde);
 }
@@ -152,7 +152,7 @@ header label {
 main {
   display: flex;
   flex-wrap: nowrap;
-  font-size: 20px;
+  font-size: 12px;
   font-family: "Poppins", sans-serif;
   height: 100vh;
   height: -webkit-fill-available;
@@ -183,7 +183,7 @@ main {
   outline: 0;
   margin-right: -35px;
   font-family: "Poppins", sans-serif;
-  width: 100%;
+  width: 50%;
 }
 
 .nav-flush .nav-link {
