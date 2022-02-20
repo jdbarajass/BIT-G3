@@ -18,25 +18,18 @@ html {
 }
 
 * {
-  /* font-family: "Poppins", sans-serif; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   outline: none;
   border: none;
-  /* text-transform: capitalize; */
 }
 
 *::selection {
   background: var(--limon);
   color: white;
 }
-
-/* html {
-  font-size: 62.4%;
-  overflow: auto;
-} */
 
 body {
   background: #f9f9f9;
@@ -78,7 +71,7 @@ section {
   padding: 2rem;
 }
 header {
-  position: fixed; /*Revisar*/
+  position: fixed;
   top: 0px;
   left: 0;
   width: 100%;
@@ -88,7 +81,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* z-index: 1000; */
 }
 
 header .logo {
@@ -102,7 +94,6 @@ header .logo span {
 }
 
 header .navbar a {
-  /* font-size: 1.9rem; */
   margin-left: 5px;
   color: var(--verde);
 }
@@ -145,7 +136,7 @@ header label {
   justify-content: initial;
   background: url(/inicio_fondo.png);
   background-size: initial;
-  /* background-position: center; */
+
   height: 630px;
 }
 

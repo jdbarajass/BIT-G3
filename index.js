@@ -10,6 +10,7 @@ app.use(express.static(__dirname + "/styles"));
 app.use(express.static(__dirname + "/imagenes"));
 app.use(express.static(__dirname + "/JavaScrip"));
 app.use(express.static(__dirname + "/calculadora.js"));
+app.use(express.static(__dirname + "/src/pages"));
 app.use(express.static("/calculadora.js"));
 var path = __dirname + "/src/views";
 app.set("views", path);
@@ -32,6 +33,9 @@ var bienvenido = require("./src/models/bienvenido");
 app.get("/borrar", function (req, res) {
   console.log("Hola, ingresaste a localhost:3000/Inicio");
   res.sendFile(__dirname + "/prueba.html");
+});
+app.get("/monedero", function (req, res) {
+  res.sendFile(__dirname + "/src/pages/monedero.html");
 });
 app.get("/bitg3", function (req, res) {
   res.sendFile(__dirname + "/src/pages/bitg3.html");
