@@ -45,14 +45,26 @@
   font-size: 20px;
 }
 .bienvenido1 {
-  background-color: antiquewhite;
-  width: 300px;
+  background-color: rgba(245, 236, 225, 0.281);
+  border-bottom: 4px rgb(0, 0, 0) solid;
+  width: 390px;
+  font-size: 30px;
+  height: 230px;
+  border-radius: 50px;
 }
 .informacion1 {
-  background-color: antiquewhite;
-  width: 300px;
+  background-color: rgba(245, 236, 225, 0.281);
+  border-bottom: 4px rgb(0, 0, 0) solid;
+  width: 390px;
+  font-size: 15px;
+  height: 230px;
+  border-radius: 30px;
 }
 .contenedo {
   display: flex;
   justify-content: space-between;
+  padding-top: 60px;
+}
+.bien {
+  font-size: 45px;
 }
