@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grafica</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <div>
+        <canvas id="myChart" width="30%" height="10%"></canvas>
+        <script>
+            const ctx = document.getElementById('myChart').getContext('2d');
+            const myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'],
+                    datasets: [{
+                        label: 'ESTADISTICAS',
+                        data: [0.2, 1.2, 2.3, 1, 4, 2.5, 3.6, 5.1, 8, 7.3, 6.9, 8.4, 7.9],
+                        // backgroundColor: [
+                        //     'black',
+                        //      'yellow',
+                        //      'onrange',
+                        //      'rgba(75, 192, 192, 0.2)',
+                        //      'rgba(153, 102, 255, 0.2)',
+                        //      'rgba(255, 159, 64, 0.2)'
+                        // ],
+                        borderColor: [
+                            'orange',
+                            'green',
+                            'green',
+                            'red',
+                            'green',
+                            'red',
+                            'yellow',
+                            'purple',
+                            'green',
+                            'yellow',
+                            'red',
+                            'purple'
+
+                        ],
+                        borderWidth: 3
+                    }]
+
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+    </div>
+</body>
+
+</html>

@@ -67,4 +67,24 @@
 }
 .bien {
   font-size: 45px;
+  text-align: center;
+  margin-top: 10%;
+}
+.nombreu {
+  font-size: 25px;
+  margin-left: 30px;
+}
+.info {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10%;
+}
+.cuen {
+  font-size: 25px;
+  margin-left: 30px;
+  margin-left: 100px;
+  justify-content: space-between;
+}
+.h77 {
+  text-align: center;
 }

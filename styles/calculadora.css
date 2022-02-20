@@ -1,16 +1,16 @@
 .instrucciones1 {
-margin-left: -50px;
+  margin-left: -10px;
 }
 #titulo {
   font-weight: normal;
-  margin-top: 50px;
+  margin-top: 150px;
   /* border-bottom: 1px black solid; */
   font-size: 20px;
   font-family: "Poppins", sans-serif;
   text-align: center;
 }
 .instrucciones {
-  font-size: 12px;
+  font-size: 13px;
   text-align: justify;
   margin-top: 50px;
 }
@@ -73,22 +73,3 @@ button {
 #division {
   background-color: #33b5e5 !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
