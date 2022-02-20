@@ -16,7 +16,7 @@
   text-decoration: none;
   outline: none;
   border: none;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 
 *::selection {
@@ -159,7 +159,8 @@ header label {
 
 .detalles .caja-contenedor .caja p {
   font-size: 1.3rem;
-  color: #888;
+  color: rgb(8, 8, 8);
+font-size: 15px;
 }
 .instrucciones_r {
   text-align: justify;
