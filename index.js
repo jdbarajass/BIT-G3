@@ -33,6 +33,9 @@ app.get("/borrar", function (req, res) {
   console.log("Hola, ingresaste a localhost:3000/Inicio");
   res.sendFile(__dirname + "/prueba.html");
 });
+app.get("/bitg3", function (req, res) {
+  res.sendFile(__dirname + "/src/pages/bitg3.html");
+});
 app.get("/inicio", function (req, res) {
   console.log("Hola, ingresaste a localhost:3000/Inicio");
   res.sendFile(__dirname + "/src/pages/index.html");
@@ -52,7 +55,7 @@ app.post("/registro", async function (req, res) {
   var datos = req.body;
   var nuevoRegistro = new Registro(datos);
   await nuevoRegistro.save();
-  res.redirect("/inicio");
+  res.redirect("/inicarSesion");
 });
 
 app.post("/suscripcion", async function (req, res) {
