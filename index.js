@@ -111,7 +111,10 @@ app.get("/calculadora", async function (req, res) {
   res.render("calculadora");
 });
 app.get("/billetera", async function (req, res) {
-  res.render("billetera");
+  var listado = await Registro.find().sort({ nombreUsuario: 1 });
+  res.render("billetera", {
+    usuarioBitg3: listado,
+  });
 });
 app.get("/referidos", async function (req, res) {
   res.render("referidos");

@@ -2,6 +2,30 @@
 
     <%- include('sidebar.ejs') %>
         <section>
-            <h1>Este es la billetera</h1>
+            <div> 
+    <table border="1">
+        <tr>
+            <td><strong>Resumen</strong></td>
+            <td><strong>Depositar</strong></td>
+            <td><strong>Cambiar</strong></td>
+            <td><strong>Retirar</strong></td>
+            <td><strong>Actualizar</strong></td>
+        </tr>
+    <% for(var i=0; i<usuarioBitg3.length; i++){ %>
+        <tr>
+            <td><%= usuarioBitg3[i].nombreUsuario %></td>
+            <td><%= usuarioBitg3[i].apellido %></td>
+            <td><%= usuarioBitg3[i].telefono %></td>
+            <td><%= usuarioBitg3[i].fechaNacimiento %></td>
+            <td>
+                <a href="/detalle/<%= usuarioBitg3[i]._id + '/' + usuarioBitg3[i].auto %>">Ver</a> - 
+                <a href="/modificar/<%= usuarioBitg3[i]._id %>">Editar</a> - 
+                <a href="/eliminar/<%= usuarioBitg3[i]._id %>">Eliminar</a>
+            </td>
+        </tr>
+    <% } %>
+    </table>
+   
+</div> 
         </section>
         <%- include('footer.ejs') %>
