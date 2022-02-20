@@ -26,7 +26,7 @@ mongoose
 var Registro = require("./src/models/Registros");
 var suscripcion = require("./src/models/suscripcion");
 var Contactanos = require("./src/models/Contactanos");
-var bienvenido = require("./src/models/bienvenido");
+var Billetera = require("./src/models/billeteraSchema");
 app.get("/borrar", function (req, res) {
   console.log("Hola, ingresaste a localhost:3000/Inicio");
   res.sendFile(__dirname + "/prueba.html");
@@ -140,10 +140,41 @@ app.get("/deposito", function (req, res) {
 app.post("/nuevodeposito", async function (req, res) {
   var datos = req.body;
 
-  var nuevoDeposito = new billeteraSchema(datos);
+  var nuevoDeposito = new Billetera(datos);
   await nuevoDeposito.save();
 
   res.redirect("/billetera");
+});
+
+//Modificar
+app.get("/modificar/:id", async function (req, res) {
+  var id = req.params.id;
+
+  var reserva = await Reserva.findById(id);
+
+  res.render("agregar", {
+    nuevo: false,
+    res: reserva,
+  });
+});
+
+app.post("/modificar", async function (req, res) {
+  var datos = req.body;
+
+  await Reserva.updateOne({ _id: req.body.id }, datos);
+
+  res.redirect("/inicio");
+});
+
+//Ver detalle
+app.get("/detalle/:id", async function (req, res) {
+  var id = req.params.id;
+
+  var depositosUsu = await Billetera.findById(id);
+
+  res.render("detalle", {
+    res: depositosUsu,
+  });
 });
 
 app.listen(3000);
