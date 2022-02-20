@@ -1,0 +1,66 @@
+<%- include('header.ejs') %> <%- include('sidebar.ejs') %>
+<section>
+    <% if(nuevo == true){ %>
+
+<h3>Detalles Del Depósito</h3>
+
+<form action="/nuevodeposito" method="post">
+    <label>Medio De Pago</label>
+    <select name="banco">
+        <option value="1001">Bancolombia</option>
+        <option value="2002">Davivienda</option>
+        <option value="3003">BBVA</option>
+    </select>
+    <br>
+    <label>Fecha</label>
+    <input type="date" name="fecha" placeholder="Ingrese la fecha">
+    <br>
+    <label>Auto</label>
+    <select name="auto">
+        <option value="Tesla Modelo S">Tesla Modelo S</option>
+        <option value="Ford Fiesta 1.6">Ford Fiesta 1.6</option>
+        <option value="Chevrolet Tracker">Chevrolet Tracker</option>
+    </select>
+    <br>
+    <label>Ubicación</label>
+    <textarea name="locacion" cols="30" rows="10"></textarea>
+    <br>
+    <br>
+    <button type="submit">Guardar</button>
+
+</form>
+
+<% }else{ %>
+<h3>Modificar Reserva</h3>
+
+<form action="/modificar" method="post">
+    <input type="hidden" name="id" value="<%= res._id %>">
+    <label>Cliente</label>
+    <select name="idCliente">
+        <option <%= (res.idCliente == 1001)? "selected":"" %> value="1001">Juan Perez</option>
+        <option <%= (res.idCliente == 2002)? "selected":"" %> value="2002">María Lanteni</option>
+        <option <%= (res.idCliente == 3003)? "selected":"" %>  value="3003">Agustina Robledo</option>
+        <option <%= (res.idCliente == 4004)? "selected":"" %> value="4004">Pepe Quiroz</option>
+    </select>
+    <br>
+    <label>Fecha</label>
+    <input type="date" name="fecha" placeholder="Ingrese la fecha" value="<%= res.fecha %>">
+    <br>
+    <label>Auto</label>
+    <select name="auto">
+        <option <%= (res.auto == "Tesla Modelo S")? "selected":"" %> value="Tesla Modelo S">Tesla Modelo S</option>
+        <option <%= (res.auto == "Ford Fiesta 1.6")? "selected":"" %> value="Ford Fiesta 1.6">Ford Fiesta 1.6</option>
+        <option <%= (res.auto == "Chevrolet Tracker")? "selected":"" %> value="Chevrolet Tracker">Chevrolet Tracker</option>
+    </select>
+    <br>
+    <label>Ubicación</label>
+    <textarea name="locacion" cols="30" rows="10"><%= res.locacion %></textarea>
+    <br>
+    <br>
+    <button type="submit">Guardar</button>
+
+</form>
+
+<% } %>
+</section>
+<%- include('footer.ejs') %>

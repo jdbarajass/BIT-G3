@@ -5,11 +5,10 @@
             <div> 
     <table border="1">
         <tr>
-            <td><strong>Resumen</strong></td>
-            <td><strong>Depositar</strong></td>
-            <td><strong>Cambiar</strong></td>
-            <td><strong>Retirar</strong></td>
-            <td><strong>Actualizar</strong></td>
+            <td><strong>Nombre</strong></td>
+            <td><strong>Apellido</strong></td>
+            <td><strong>Numero</strong></td>
+            <td><strong>Fecha</strong></td>
         </tr>
     <% for(var i=0; i<usuarioBitg3.length; i++){ %>
         <tr>
@@ -18,9 +17,11 @@
             <td><%= usuarioBitg3[i].telefono %></td>
             <td><%= usuarioBitg3[i].fechaNacimiento %></td>
             <td>
-                <a href="/detalle/<%= usuarioBitg3[i]._id + '/' + usuarioBitg3[i].auto %>">Ver</a> - 
-                <a href="/modificar/<%= usuarioBitg3[i]._id %>">Editar</a> - 
-                <a href="/eliminar/<%= usuarioBitg3[i]._id %>">Eliminar</a>
+                <a href="/detalle/<%= usuarioBitg3[i]._id + '/' + usuarioBitg3[i].auto %>">Resumen</a> - 
+                <a href="/deposito">Depositar</a> - 
+                <a href="/modificar/<%= usuarioBitg3[i]._id %>">Actualizar</a> - 
+                <a href="/modificar/<%= usuarioBitg3[i]._id %>">Cambiar</a> - 
+                <a href="/eliminar/<%= usuarioBitg3[i]._id %>">Retirar</a>
             </td>
         </tr>
     <% } %>

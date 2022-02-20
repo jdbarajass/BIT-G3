@@ -3,9 +3,6 @@ var mongoose = require("mongoose");
 var app = express();
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(express.static("/styles"));
-// app.use(express.static(__dirname + "/styles"));
-// app.use(express.static("styles"));
 app.use(express.static(__dirname + "/styles"));
 app.use(express.static(__dirname + "/imagenes"));
 app.use(express.static(__dirname + "/JavaScrip"));
@@ -68,9 +65,6 @@ app.post("/Contactanos", async function (req, res) {
   await nuevoContacto.save();
   res.redirect("/inicio");
 });
-// app.get("/loginUsuario", async function (req, res) {
-//   res.render("loginUsuario");
-// });
 app.post("/loginUsuario", async function (req, res) {
   var correoLogin = req.body.correo;
   var correosRegistrados = await Registro.find({ correo: correoLogin }).limit(
@@ -94,18 +88,7 @@ app.get("/inicioBilletera", async function (req, res) {
   res.render("inicioBilletera", {
     usuarioBitg3: listado,
   });
-  // var datosContactanos = req.body;
-  // var nuevoContacto = new Contactanos(datosContactanos);
-  // await nuevoContacto.save();
-  // res.redirect("/inicio");
 });
-
-// app.post("/Bienvenido", async function (req, res) {
-//   var datosBienvenido = req.body;
-//   var nuevoBienvenido = new Bienvenido(datosBienvenido);
-//   await nuevoBienvenido.save();
-//   res.redirect("/loginUsuario");
-// });
 
 app.get("/calculadora", async function (req, res) {
   res.render("calculadora");
@@ -123,10 +106,38 @@ app.get("/preguntasFrecuentes", async function (req, res) {
   res.render("preguntasFrecuentes");
 });
 
-// app.get("/login", function (req, res) {
-//   console.log("Hola, ingresaste a localhost:3000/Inicio");
-//   res.redirect('/login');
-// });
+app.post("/modificar", async function (req, res) {
+  var datos = req.body;
+
+  await Registro.updateOne({ _id: req.body.id }, datos);
+
+  res.redirect("/inicioBilletera");
+});
+
+//Eliminar
+app.get("/eliminar/:id", async function (req, res) {
+  var id = req.params.id;
+
+  await Registro.findByIdAndRemove(id);
+
+  res.redirect("/billetera");
+});
+
+//Nuevo Deposito
+app.get("/deposito", function (req, res) {
+  res.render("deposito", {
+    nuevo: true,
+  });
+});
+
+app.post("/nuevodeposito", async function (req, res) {
+  var datos = req.body;
+
+  var nuevoDeposito = new billeteraSchema(datos);
+  await nuevoDeposito.save();
+
+  res.redirect("/billetera");
+});
 
 app.listen(3000);
 console.log("Servidor iniciado en el puerto 3000");
