@@ -10,39 +10,37 @@
                     <div class="deposito1">
                         <i class="icon fa fa-download"></i>
                         <h1 class="h22"> Deposito</h1>
-                        <span class="numerosl">5</span>
+                        <span class="numerosl">0</span>
                     </div>
                     <div class="retiro1">
                         <i class="fa-solid fa-upload"></i>
                         <h1 class="h22">Retiros</h1>
-                        <span class="numerosl">2</span>
+                        <span class="numerosl">0</span>
                     </div>
                     <div class="cambio1">
                         <i class="fa-solid fa-arrow-right-arrow-left"></i>
                         <h1 class="h22">Cambios</h1>
-                        <span class="numerosl">3</span>
+                        <span class="numerosl">0</span>
                     </div>
                     <div class="balance1">
                         <i class="fa-solid fa-bitcoin-sign"></i>
                         <h1 class="h22">Balance</h1>
-                        <span class="numerosl">0.12</span>
+                        <span class="numerosl">
+                            <% for(var i=0; i<usuarioBitg3.length; i++){ %>
+                    <tr>
+                        <td>
+                            0
+                        </td>
+                    </tr>
+                    <% } %>
+                        </span>
                     </div>
                 </div>
                 <div class="contenedo">
                     <div class="bienvenido1">
                         <h1 class="bien">Bienvenido de nuevo</h1>
-                        <span class="nombreu">Paola Campos</span>
-                    </div>
-                    <div class="informacion1">
-                        <h1 class="info">Información para depositar</h1>
-                        <br>
-
-                        <span class="cuen">Número de cuenta</span>
-                        <h3 class="h77"> 19324789357</h3>
-                    </div>
-                </div>
-
-                <% for(var i=0; i<usuarioBitg3.length; i++){ %>
+                        <span class="nombreu">
+                            <% for(var i=0; i<usuarioBitg3.length; i++){ %>
                     <tr>
                         <td>
                             <%= usuarioBitg3[i].nombreUsuario %>
@@ -50,19 +48,26 @@
                         <td>
                             <%= usuarioBitg3[i].apellido %>
                         </td>
+                    </tr>
+                    <% } %>
+                        </span>
+                    </div>
+                    <div class="informacion1">
+                        <h1 class="info">Información para depositar</h1>
+                        <br>
+
+                        <span class="cuen">Número de cuenta</span>
+                        <h3 class="h77"> <% for(var i=0; i<usuarioBitg3.length; i++){ %>
+                    <tr>
                         <td>
                             <%= usuarioBitg3[i].telefono %>
                         </td>
-                        <td>
-                            <%= usuarioBitg3[i].fechaNacimiento %>
-                        </td>
-                        <td>
-                            <a href="/detalle/<%= usuarioBitg3[i]._id + '/' + usuarioBitg3[i].auto %>">Ver</a> -
-                            <a href="/modificar/<%= usuarioBitg3[i]._id %>">Editar</a> -
-                            <a href="/eliminar/<%= usuarioBitg3[i]._id %>">Eliminar</a>
-                        </td>
                     </tr>
-                    <% } %>
+                    <% } %></h3>
+                    </div>
+                </div>
+
+                
                         </table>
 
             </div>

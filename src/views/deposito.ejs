@@ -1,53 +1,50 @@
 <%- include('header.ejs') %> <%- include('sidebar.ejs') %>
+
 <section>
-    <% if(nuevo == true){ %>
+  <link rel="stylesheet" href="/formadeposito.css" />
 
-<h3>Detalles Del Depósito</h3>
+  <% if(nuevo==true){ %>
 
-<form action="/nuevodeposito" method="post">
-    <label>Medio De Pago</label>
-    <select name="banco">
-        <option value="1001">Bancolombia</option>
-        <option value="2002">Davivienda</option>
-        <option value="3003">BBVA</option>
-    </select>
-    <br>
-    <input type="hidden" name="usuarioId" value="<%= usuarioId %>">
-    <label>Monto A Depósitar</label>
-    <input type="number" placeholder="Ej. 1'000.000$" name="monto">
-    <br>
-    <button type="submit">Guardar</button>
-
-</form>
-
-<% }else{ %>
-<h3>Modificar Reserva</h3>
-
-<form action="/modificar" method="post">
-    <input type="hidden" name="id" value="<%= res._id %>">
-    <label>Cliente</label>
-    <select name="banco">
-        <option <%= (res.banco == 1001)? "selected":"" %> value="1001">Bancolombia</option>
-        <option <%= (res.banco == 2002)? "selected":"" %> value="2002">Davivienda</option>
-        <option <%= (res.banco == 3003)? "selected":"" %>  value="3003">BBVA</option>
-    </select>
-    <br>
-    <label>Auto</label>
-
-    <input type="hidden" name="usuarioId" value="<%= usuarioId %>">
-    <label>Monto A Depósitar</label>
-    <input type="number" placeholder="Ej. 1'000.000$" name="monto">
-    <br>
-
-    <button type="submit">Guardar</button>
-<div>
-    <ul>
-      <li><strong>Monto: </strong><%= res.monto %></li>
-      <li><strong>Banco: </strong><%= res.banco %></li>
-    </ul>
+  <div class="detalledeposito">
+    <p><strong> Detalles Del Depósito</strong></p>
   </div>
-</form>
+  <br />
+  <br />
+  <br />
+  <form class="formas4" action="/nuevodeposito" method="post">
+    <label class="mediodepago">Medio De Pago:</label>
+    <br />
 
-<% } %>
+    <select class="bancos" name="banco">
+      <option value="0"></option>
+      <option value="1001">Bancolombia</option>
+      <option value="2002">Davivienda</option>
+      <option value="3003">BBVA</option>
+    </select>
+    <br />
+    <br />
+    <br />
+    <input type="hidden" name="usuarioId" value="<%= usuarioId %>" />
+    <label class="mediodepago">Monto A Depósitar:</label>
+    <br />
+    <br />
+    <input
+      class="bancos3"
+      type="number"
+      placeholder="Ingrese el monto"
+      name="monto"
+    />
+    <br />
+    <br />
+    <br />
+    <button class="boton89" type="submit"><strong> Guardar</strong></button>
+  </form>
+
+  <% }else{ %>
+  <h3>Modificar Reserva</h3>
+
+  <form action="/modificar" method="post"></form>
+
+  <% } %>
 </section>
 <%- include('footer.ejs') %>

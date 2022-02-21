@@ -104,6 +104,7 @@ app.get("/billetera", async function (req, res) {
   var listado = await Registro.find().sort({ nombreUsuario: 1 });
   res.render("billetera", {
     usuarioBitg3: listado,
+    monto: 10000000,
   });
 });
 app.get("/referidos", async function (req, res) {

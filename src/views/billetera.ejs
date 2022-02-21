@@ -2,31 +2,66 @@
 
     <%- include('sidebar.ejs') %>
         <section>
-            <div> 
-                <h1>Billetera</h1>
-    <table border="1">
-        <tr>
-            <td><strong>Nombre</strong></td>
-            <td><strong>Apellido</strong></td>
-            <td><strong>Numero</strong></td>
-            <td><strong>Fecha</strong></td>
-        </tr>
-    <% for(var i=0; i<usuarioBitg3.length; i++){ %>
-        <tr>
-            <td><%= usuarioBitg3[i].nombreUsuario %></td>
-            <td><%= usuarioBitg3[i].apellido %></td>
-            <td><%= usuarioBitg3[i].telefono %></td>
-            <td><%= usuarioBitg3[i].fechaNacimiento %></td>
-            <td>
-                <a href="/resumenDeposito/<%= usuarioBitg3[i]._id%>">Resumen</a> - 
-                <a href="/deposito/<%= usuarioBitg3[i]._id %>">Depositar</a> - 
-                <a href="/modificar/<%= usuarioBitg3[i]._id %>">Cambiar</a> - 
-                <a href="/eliminar/<%= usuarioBitg3[i]._id %>">Retirar</a>
-            </td>
-        </tr>
-    <% } %>
-    </table>
-   
-</div> 
+            <link rel="stylesheet" href="/resumen.css">
+
+            <div>
+                <h1 class="bill568">Billetera</h1>
+            </div>
+
+            <div class="table65">
+
+                <table>
+                    <thead>
+                        <tr class="table5">
+                            <th><strong>Nombre</strong></th>
+                            <th><strong>Apellido</strong></th>
+                            <th><strong>Numero</strong></th>
+                            <th><strong>Fecha</strong></th>
+                        </tr>
+                    </thead>
+                    <% for(var i=0; i<usuarioBitg3.length; i++){ %>
+                        <tr class="tara5">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <%= usuarioBitg3[i].nombreUsuario %>
+                                    </td>
+                                    <td>
+                                        <%= usuarioBitg3[i].apellido %>
+                                    </td>
+                                    <td>
+                                        <%= usuarioBitg3[i].telefono %>
+                                    </td>
+                                    <td>
+                                        <%= usuarioBitg3[i].fechaNacimiento %>
+                                    </td>
+                                </tr>
+                </table>
+
+            </div>
+
+            <div class="pri45">
+                <div class="boton9">
+                    <span><a href="/resumenDeposito/<%= usuarioBitg3[i]._id%>">Resumen</a></span>
+                </div>
+
+                <div class="boton9">
+                    <span><a href="/deposito/<%= usuarioBitg3[i]._id %>">Depositar</a></span>
+                </div>
+
+                <div class="boton9" v>
+                    <span><a href="/modificar/<%= usuarioBitg3[i]._id %>">Cambiar</a></span>
+                </div>
+
+                <div class="boton9">
+                    <span><a href="/eliminar/<%= usuarioBitg3[i]._id %>">Retirar</a></span>
+                </div>
+            </div>
+
+            <% } %>
+
+
+
+                </div>
         </section>
         <%- include('footer.ejs') %>

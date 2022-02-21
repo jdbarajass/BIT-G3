@@ -3,7 +3,10 @@
   <div>
     <ul>
       <li><strong>Monto: </strong><%= res.monto %></li>
-      <li><strong>Banco: </strong><%= res.banco %></li>
+      <li>
+        <strong>Banco: </strong><% if(res.banco==1001){ %> Bancolombia <% }else
+        if (res.banco==2002){ %> Davivienda <% }else{ %> BBVA <% } %>
+      </li>
     </ul>
   </div>
 </section>
