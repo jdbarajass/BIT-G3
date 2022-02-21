@@ -131,18 +131,18 @@ app.get("/eliminar/:id", async function (req, res) {
 });
 
 //Nuevo Deposito
-app.get("/deposito", function (req, res) {
+app.get("/deposito/:id", function (req, res) {
+  var id = req.params.id;
   res.render("deposito", {
     nuevo: true,
+    usuarioId: id,
   });
 });
 
 app.post("/nuevodeposito", async function (req, res) {
   var datos = req.body;
-
   var nuevoDeposito = new Billetera(datos);
   await nuevoDeposito.save();
-
   res.redirect("/billetera");
 });
 
@@ -167,12 +167,10 @@ app.post("/modificar", async function (req, res) {
 });
 
 //Ver detalle
-app.get("/detalle/:id", async function (req, res) {
-  var id = req.params.id;
-
-  var depositosUsu = await Billetera.findById(id);
-
-  res.render("detalle", {
+app.get("/resumenDeposito/:usuarioId", async function (req, res) {
+  var usuarioId = req.params.usuarioId;
+  var depositosUsu = await Billetera.findOne({ usuarioId });
+  res.render("resumendeposito", {
     res: depositosUsu,
   });
 });

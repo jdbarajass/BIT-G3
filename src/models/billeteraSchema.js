@@ -2,8 +2,8 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var Billetera = new Schema({
+  usuarioId: String,
   monto: String,
-  saldo: String,
   banco: String,
 });
 

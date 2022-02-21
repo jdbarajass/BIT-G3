@@ -3,6 +3,7 @@
     <%- include('sidebar.ejs') %>
         <section>
             <div> 
+                <h1>Billetera</h1>
     <table border="1">
         <tr>
             <td><strong>Nombre</strong></td>
@@ -17,9 +18,8 @@
             <td><%= usuarioBitg3[i].telefono %></td>
             <td><%= usuarioBitg3[i].fechaNacimiento %></td>
             <td>
-                <a href="/detalle/<%= usuarioBitg3[i]._id + '/' + usuarioBitg3[i].auto %>">Resumen</a> - 
-                <a href="/deposito">Depositar</a> - 
-                <a href="/modificar/<%= usuarioBitg3[i]._id %>">Actualizar</a> - 
+                <a href="/resumenDeposito/<%= usuarioBitg3[i]._id%>">Resumen</a> - 
+                <a href="/deposito/<%= usuarioBitg3[i]._id %>">Depositar</a> - 
                 <a href="/modificar/<%= usuarioBitg3[i]._id %>">Cambiar</a> - 
                 <a href="/eliminar/<%= usuarioBitg3[i]._id %>">Retirar</a>
             </td>
