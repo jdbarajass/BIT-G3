@@ -1,0 +1,35 @@
+.detalledeposito {
+  font-size: 50px;
+  /* text-align: justify; */
+  margin-top: -50px;
+  margin-left: 310px;
+  color: aliceblue;
+}
+.mediodepago {
+  font-size: 30px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.bancos {
+  font-size: 25px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border: 1px solid black;
+  margin-top: 40px;
+  margin-top: 10px;
+}
+.boton89 {
+  width: 200px;
+  height: 40px;
+  margin-left: 20px;
+  background-color: #0c8a75;
+  color: black;
+}
+.bancos3 {
+  font-size: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border: 1px solid black;
+  margin-top: 40px;
+  margin-top: 10px;
+}

@@ -16,7 +16,7 @@
   text-decoration: none;
   outline: none;
   border: none;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 
 *::selection {
@@ -153,6 +153,7 @@ header label {
   font-size: 1.7rem;
   color: #333;
   padding: 1.4rem 0;
+  text-align: justify;
 }
 
 .detalles .caja-contenedor {
@@ -213,11 +214,13 @@ header label {
 
 .acerca_de .columna .content {
   flex: var(--flex-cont);
+  text-align: justify;
 }
 
 .acerca_de .columna .content h3 {
   font-size: 3rem;
   color: #666;
+  text-align: center;
 }
 
 .acerca_de .columna .content p {
