@@ -27,28 +27,25 @@
     <input type="hidden" name="id" value="<%= res._id %>">
     <label>Cliente</label>
     <select name="banco">
-        <option <%= (res.banco == 1001)? "selected":"" %> value="1001">Juan Perez</option>
-        <option <%= (res.banco == 2002)? "selected":"" %> value="2002">María Lanteni</option>
-        <option <%= (res.banco == 3003)? "selected":"" %>  value="3003">Agustina Robledo</option>
-        <option <%= (res.banco == 4004)? "selected":"" %> value="4004">Pepe Quiroz</option>
+        <option <%= (res.banco == 1001)? "selected":"" %> value="1001">Bancolombia</option>
+        <option <%= (res.banco == 2002)? "selected":"" %> value="2002">Davivienda</option>
+        <option <%= (res.banco == 3003)? "selected":"" %>  value="3003">BBVA</option>
     </select>
-    <br>
-    <label>Fecha</label>
-    <input type="date" name="fecha" placeholder="Ingrese la fecha" value="<%= res.fecha %>">
     <br>
     <label>Auto</label>
-    <select name="auto">
-        <option <%= (res.auto == "Tesla Modelo S")? "selected":"" %> value="Tesla Modelo S">Tesla Modelo S</option>
-        <option <%= (res.auto == "Ford Fiesta 1.6")? "selected":"" %> value="Ford Fiesta 1.6">Ford Fiesta 1.6</option>
-        <option <%= (res.auto == "Chevrolet Tracker")? "selected":"" %> value="Chevrolet Tracker">Chevrolet Tracker</option>
-    </select>
-    <br>
-    <label>Ubicación</label>
-    <textarea name="locacion" cols="30" rows="10"><%= res.locacion %></textarea>
-    <br>
-    <br>
-    <button type="submit">Guardar</button>
 
+    <input type="hidden" name="usuarioId" value="<%= usuarioId %>">
+    <label>Monto A Depósitar</label>
+    <input type="number" placeholder="Ej. 1'000.000$" name="monto">
+    <br>
+
+    <button type="submit">Guardar</button>
+<div>
+    <ul>
+      <li><strong>Monto: </strong><%= res.monto %></li>
+      <li><strong>Banco: </strong><%= res.banco %></li>
+    </ul>
+  </div>
 </form>
 
 <% } %>

@@ -113,14 +113,6 @@ app.get("/preguntasFrecuentes", async function (req, res) {
   res.render("preguntasFrecuentes");
 });
 
-app.post("/modificar", async function (req, res) {
-  var datos = req.body;
-
-  await Registro.updateOne({ _id: req.body.id }, datos);
-
-  res.redirect("/inicioBilletera");
-});
-
 //Eliminar
 app.get("/eliminar/:id", async function (req, res) {
   var id = req.params.id;
@@ -146,33 +138,31 @@ app.post("/nuevodeposito", async function (req, res) {
   res.redirect("/billetera");
 });
 
+//Ver detalle
+app.get("/resumenDeposito/:id", async function (req, res) {
+  var id = req.params.id;
+  var depositosUsu = await Billetera.findOne({ id });
+  res.render("resumendeposito", {
+    res: depositosUsu,
+  });
+});
+
 //Modificar
 app.get("/modificar/:id", async function (req, res) {
   var id = req.params.id;
-
-  var reserva = await Reserva.findById(id);
-
-  res.render("agregar", {
+  console.log("Lo que tiene el id", id);
+  var modificarMonto = await Billetera.findById(id);
+  console.log("Lo que tiene la variable modificar monto", modificarMonto);
+  res.render("billetera", {
     nuevo: false,
-    res: reserva,
+    res: modificarMonto,
   });
 });
 
 app.post("/modificar", async function (req, res) {
   var datos = req.body;
-
-  await Reserva.updateOne({ _id: req.body.id }, datos);
-
-  res.redirect("/inicio");
-});
-
-//Ver detalle
-app.get("/resumenDeposito/:usuarioId", async function (req, res) {
-  var usuarioId = req.params.usuarioId;
-  var depositosUsu = await Billetera.findOne({ usuarioId });
-  res.render("resumendeposito", {
-    res: depositosUsu,
-  });
+  await Registro.updateOne({ _id: req.body.id }, datos);
+  res.redirect("/billetera");
 });
 
 app.listen(3000);
