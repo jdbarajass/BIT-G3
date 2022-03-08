@@ -12,9 +12,8 @@ app.use(express.static("/calculadora.js"));
 var path = __dirname + "/src/views";
 app.set("views", path);
 app.set("view engine", "ejs");
-mongoose
-  .connect(
-    "mongodb+srv://jdbarajass:1234@cluster0.ukrek.mongodb.net/RegistroUsuBIT?retryWrites=true&w=majority"
+mongoose.connect(
+    "mongodb+srv://Daryelingpcg:27758604@cluster0.bpwgj.mongodb.net/RegistroUsuBIT?retryWrites=true&w=majority"
   )
   .then(function (db) {
     console.log("Conectado a la BD");
