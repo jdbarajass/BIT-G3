@@ -1,18 +1,36 @@
 .instrucciones1 {
   margin-left: -10px;
 }
+
+.instrucciones2{
+  /* margin-bottom: 100px; */
+  font-size: 13px;
+  text-align: justify;
+  margin-top: -10px;
+  margin-left: -30px;
+}
 #titulo {
   font-weight: normal;
-  margin-top: 150px;
+  margin-top: -30px;
   /* border-bottom: 1px black solid; */
   font-size: 20px;
   font-family: "Poppins", sans-serif;
-  text-align: center;
+  left: 100px;
+  margin-left: -30px;
+}
+#titulo1 {
+  font-weight: normal;
+  margin-bottom: 10px;
+  margin-left: -30px;
+  /* border-bottom: 1px black solid; */
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
 }
 .instrucciones {
   font-size: 13px;
   text-align: justify;
-  margin-top: 50px;
+  margin-top: 15px;
+  margin-left: -30px;
 }
 
 html {
@@ -22,7 +40,7 @@ html {
 .calculadora-general {
   background-color: rgb(255, 255, 255);
   position: absolute;
-  top: 54%;
+  top: 50%;
   left: 80%;
   transform: translate(-50%, -50%);
   width: 350px;
